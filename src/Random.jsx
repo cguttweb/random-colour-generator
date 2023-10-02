@@ -22,10 +22,7 @@ const Random = () => {
     return 'rgb(' + ary.join(', ') + ')';
   }
 
-  function applyColor() {
-    const color = formatColor(setColor(color));
-    document.body.style.background = color;
-  }
+
 
   return (
     <div>
