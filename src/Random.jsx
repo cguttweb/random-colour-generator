@@ -6,7 +6,7 @@ const Random = () => {
   const [color, setColor] = useState([255, 255, 255])
 
   function handleClick(){
-    setColor([255, 0, 0])
+    setColor(chooseColor(color))
     console.log(`colour is ${color}`)
   }
 
@@ -22,11 +22,6 @@ const Random = () => {
     return 'rgb(' + ary.join(', ') + ')';
   }
 
-  // function isLight() {
-  //   const rgb = setColor(color)
-  //   return rgb.reduce((a,b) => a+b) < 127 * 3;
-  // }
-
   function applyColor() {
     const color = formatColor(setColor(color));
     document.body.style.background = color;
@@ -35,7 +30,7 @@ const Random = () => {
   return (
     <div>
       <h1>
-        Your RGB color is {color}
+        Your RGB color is {formatColor(color)}
       </h1>
       <button onClick={handleClick}>click for colour</button>
     </div>
