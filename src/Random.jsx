@@ -4,11 +4,16 @@ import { useState } from 'react'
 const Random = () => {
 
   const [color, setColor] = useState([255, 255, 255])
-
+  
   function handleClick(){
     setColor(chooseColor(color))
-    console.log(`colour is ${color}`)
+    // applyColor()
   }
+  
+  // function applyColor() {
+  //   const color = formatColor(setColor);
+  //   document.body.style.backgroundColor = rgb(255, 255, 255);
+  // }
 
   function chooseColor() {
     const random = [];
